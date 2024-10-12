@@ -9,3 +9,4 @@ CSS and JS project
 - Form Management
 - Url parameters management
 - String functions 
+- Preview médias uploadé file
