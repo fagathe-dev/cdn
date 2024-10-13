@@ -1,0 +1,62 @@
+#snackbarContainer {
+  padding: .3rem;
+  height: auto;
+  max-height: 500px;
+  width: 100%;
+  max-width: 400px;
+  position: fixed;
+  bottom: calc(3px + (3rem/2));
+  right: calc(3px + (3rem/2));
+  background-color: transparent;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow-y: auto;
+  
+  .snackbar{
+    width: 100%;
+    padding: calc(4/7 * 1rem) calc(4rem/3);
+    font-size: .95rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    font-family: sans-serif;
+    transition: all 400ms ease-in-out;
+    transition: width 400ms ease-in-out;
+    overflow: hidden;
+    position: relative;
+    margin-block-end: 10px;
+    &:nth-last-child {
+      margin-block-end: 0;
+    }
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+      cursor: pointer;
+    }
+    .snackbar-body {
+      display: flex;
+      line-height: 1.2;
+      justify-content: space-between;
+      align-items: center;
+    }
+    a {
+      border-radius: calc(2rem/7);
+      padding: calc(3rem/7) calc(4rem/7);
+      color: inherit;
+      background-color: transparent;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: all 300ms ease-in-out;
+      &:hover {
+        text-decoration: none;
+        box-shadow: rgba(50, 50, 93, 0.1) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.15) 0px 18px 36px -18px inset;
+      }
+    }
+    .snackbar-progress {
+      height: 5px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  
+  }
+
+} 

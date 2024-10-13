@@ -5,10 +5,12 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc --watch",
-    "compile:sass": "sass --watch scss/main.scss css/main.css",
-    "lint": "eslint --ext .ts",
+    "build:tsc": "minify js/main.js > js/main.min.js",
+    "scss": "sass --watch scss/main.scss css/main.css",
+    "build:scss": "sass scss/main.scss css/main.css && minify css/main.css > css/main.min.css",
+    "lint": "eslint --ext .js",
     "lint:fix": "eslint --fix -c ./.eslintrc.json ./ts",
-    "build": "sass scss/main.scss css/main.css && tsc",
+    "build": "npm run build:scss && npm run build:tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
